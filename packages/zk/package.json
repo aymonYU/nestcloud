@@ -1,12 +1,17 @@
 {
-  "name": "@nestcloud/zk",
-  "version": "0.6.11",
+  "name": "@tencent/nestcloud-zk",
+  "version": "0.6.12",
   "description": "A Consul module for Nest framework (node.js)",
   "author": "Miaowing <i@zfeng.net>",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
   "dependencies": {
     "@nestcloud/boot": "^0.6.10",
     "@nestcloud/common": "^0.6.10",
