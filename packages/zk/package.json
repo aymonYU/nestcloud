@@ -1,0 +1,27 @@
+{
+  "name": "@nestcloud/zk",
+  "version": "0.6.11",
+  "description": "A Consul module for Nest framework (node.js)",
+  "author": "Miaowing <i@zfeng.net>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@nestcloud/boot": "^0.6.10",
+    "@nestcloud/common": "^0.6.10",
+    "node-zookeeper-client": "^1.1.0",
+    "uuid": "^7.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nest-cloud/nestcloud.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nest-cloud/nestcloud/issues"
+  },
+  "homepage": "https://github.com/nest-cloud/nestcloud#readme",
+  "devDependencies": {
+    "@types/node-zookeeper-client": "^0.2.7"
+  }
+}
