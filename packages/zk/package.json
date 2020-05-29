@@ -1,6 +1,6 @@
 {
   "name": "@tencent/nestcloud-zk",
-  "version": "0.6.12",
+  "version": "0.6.13",
   "description": "A Consul module for Nest framework (node.js)",
   "author": "Miaowing <i@zfeng.net>",
   "license": "MIT",
@@ -16,6 +16,7 @@
     "@nestcloud/boot": "^0.6.10",
     "@nestcloud/common": "^0.6.10",
     "node-zookeeper-client": "^1.1.0",
+    "node-zookeeper-package": "^1.0.0",
     "uuid": "^7.0.3"
   },
   "repository": {

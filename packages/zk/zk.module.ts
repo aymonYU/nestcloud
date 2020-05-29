@@ -2,7 +2,7 @@ import { get, set } from 'lodash';
 import { Module, DynamicModule, Global } from '@nestjs/common';
 import { NEST_BOOT_PROVIDER, NEST_BOOT } from '@nestcloud/common';
 import { Boot } from '@nestcloud/boot';
-import { ZK } from './zk';
+import { ZK } from 'node-zookeeper-package/lib/zk';
 const NEST_ZK_PROVIDER = 'NEST_ZK_PROVIDER';
 
 export interface IZKOptions {
@@ -11,7 +11,7 @@ export interface IZKOptions {
      * zk 服务器 host
      * 支持给定一个 字符串 或者 一个异步方法
      */
-    connect?: (() => Promise<string>) | string;
+    connect?: ((boot: Boot) => Promise<string>) | string;
     /**
      * zk 连接超时时间
      */
@@ -36,7 +36,7 @@ export class ZKModule {
                 if (typeof options.connect === 'string') {
                     zkOpt.connect = options.connect;
                 } else if (typeof options.connect === 'function') {
-                    zkOpt.connect = await options.connect();
+                    zkOpt.connect = await options.connect(boot);
                 }
 
                 // 第二步: 尝试去读取 yaml 文件
